@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Audio file attached kaise kare -->
+     <!-- first method -->
+     <audio src="check.mp3" controls></audio>
+     <br><br>
+
+     <!-- second method kuch advantages hai= agar first audio kisi bhi vajah se load nahi huaa to second wala automatic load ho jayega   -->
+
+     <audio  controls>
+        <source src="Jaadugar.mp3" >
+        <source src="check.mp3">
+        
+     </audio>
+     <br><br>
+     <!-- video file ko kaise attached kare -->
+      <video src="./hawa.MP4" height="350" width="250" controls></video>
+<br><br>
+<video controls height="350" width="250" autoplay muted>
+    <source src="./hawa.MP4" >
+</video>
+<br><br>
+      <!-- youtuve video ko kaise attached kare -->
+       <!-- copy video link and paste in iframe tag and cut the (watch?v=){ye video ka id hota hai=KNtyCUH-2oM} this part and add(embed/) -->
+     <iframe src="https://www.youtube.com/embed/KNtyCUH-2oM" frameborder="0" height="300" width="500" allowfullscreen></iframe>
+     <!-- allow full screen for full screen -->
+     <iframe src="https://www.youtube.com/embed/p2j6Wq57MEE" frameborder="0" height="300" width="500" allowfullscreen></iframe>
+     <br>
+      <!-- attached your own website in another html page -->
+       <!-- but kuch website ye allow nahi karti hai video ko embed karna = agar unke video ke access karna hai to unko website par jana hi hogas -->
+     <iframe src="../DAY8/4.html" frameborder="0" height="1000" width="500"></iframe>
+</body>
+</html>

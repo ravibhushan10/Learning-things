@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    
+}
+
+body{
+   
+    background-color: rgb(249, 248, 248);
+  
+}
+main{
+    background-color: rgb(249, 248, 248);
+      margin-left: 45px;
+    margin-right: 25px;
+}
+.Box{
+    display: inline-block;
+}
+.img{
+    height: 230px;
+    width: auto;
+    border-radius: 20px;
+    position: relative;
+    /* use to hide save image as */
+    pointer-events: none;
+}
+.restaurant_name{
+    font-size: 20px;
+    font-weight: bolder;
+   
+
+}
+.rating{
+    background-color: green;
+    height: 20px;
+    padding: 3px;
+    position: absolute;
+    right: 5px;
+    color: white;
+    border-radius: 7px;
+}
+.restaurant, .food{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: 10px solid rgb(249, 248, 248);
+    /* this is the best way to wirte to avoid image moving */
+    
+}
+.card:hover{
+    /* if you write ==  border: 10px solid rgb(249, 248, 248)  in the hover the your image is moving when cursor is come to card   so don't write in hover better to write in card*/
+    background-color: rgb(249, 248, 248);
+    border-color: white ;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.price{
+    position: absolute;
+    right: 5px;
+}
+.loc{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.distance{
+    position: absolute;
+    right: 8px;
+    font-weight: bold ;
+    font-size: 15px;
+}
+.food,.location_name{
+    font-size: 15px;
+    color: gray;
+}
+.off{
+    position: relative;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color:white;
+  
+   
+    
+    
+}
+.offset{
+    
+    background-color: rgba(5, 129, 212, 0.89);
+    bottom: 105px;
+    position: absolute;
+   
+}
+.head{
+ background-color: white;
+}
+.first{
+    margin-top: 5px;
+    margin-left: 25px;
+}
+.brand{
+    color: rgb(216, 5, 5);
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.searching{
+    width: 300px;
+    height: 40px ;
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+    
+}
+.location_search{
+    width: 250px;
+    height: 40px ;
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+    
+}
+
+.log{
+    margin-left: 180px;
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+}
+.sign{
+    margin-left: 28px;
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+}
+button{
+    font-size: 17px;
+    height: 42px;
+    width: 70px;
+    background-color: rgb(249, 248, 248);
+    /*to remove border use none */
+    border: none;
+}
+.second{
+    margin-top: 30px;
+   
+      position: sticky;
+    top: 0px;
+    background-color: white;
+    
+    
+}
+.img3,.img4,.img5{
+    height: 40px;
+    width: 40px;
+    /* use to hide save image as */
+    pointer-events: none;
+  
+}
+.din,.nig,.del{
+    position: relative;
+    bottom: 10px;
+    margin-left: 6px;
+    color: rgb(132, 131, 131);
+    
+}
+.dining{
+    margin-left: 90px;
+}
+.delivery,.night{
+     margin-left: 60px;
+}
+.third{
+ 
+  height: 500px;
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+  
+}

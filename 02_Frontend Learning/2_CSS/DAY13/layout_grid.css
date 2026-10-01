@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    padding: 4rem;
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    display: grid;
+
+    /* grid-template-columns: 200px 200px 200px;
+    if you want to row flexibel automatic then don't mention the rows
+    grid-template-rows:  200px 200px  ; */
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    gap: 1rem;
+}
+.box{
+    font-size: 2rem;
+    background-color: orange;
+    border: 0.5em solid black;
+    
+}
+.header,.footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.side{
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    /* shorthand notation */
+    grid-row: 2/4;
+}
+.content1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+}

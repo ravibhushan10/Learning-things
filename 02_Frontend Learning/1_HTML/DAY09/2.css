@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+.header{
+    position: fixed;
+    width: 100%;
+}
+.h1{
+    text-align: center;
+    background-color: brown;
+}
+.main{
+    padding-top: 45px;
+}

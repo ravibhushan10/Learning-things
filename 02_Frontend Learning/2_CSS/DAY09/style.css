@@ -1,0 +1,68 @@
+/* .container{
+   height: 1000px; 
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    /* by default direction is row */
+
+    
+    /* flex direction will identify main axis */
+    /* row : horizontal is main axis */
+    /* column : vertical is main axis */
+
+ 
+
+    /*
+    flex-direction: column-reverse; 
+     it aligned opposite side by row  }*/
+ 
+
+.container{
+    height: 1000px; 
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;  /* justify-content == it tell us from where content is going to start
+    (it works only around the main axis)
+
+   start,end,center,space(around,between,evenly)
+   
+    */
+
+    align-items: start;  /* align-item == it tell us from where content is going to start
+    (it works only around the cross axis)*/
+}
+.box{
+    height: 150px;
+    width: 150px;
+    border: 5px solid black;
+    margin: 5px;
+}
+.box1
+{
+    background-color: red;
+}
+.box2
+{
+    background-color: rgb(34, 255, 0);
+}
+.box3
+{
+    background-color: rgb(255, 0, 195);
+}
+.box4
+{
+   
+    background-color: rgb(55, 0, 255);
+}
+
+.container2{
+    display: flex;
+    align-items: baseline;
+}
+.first{
+    font-size: 50px;
+}
+.second{
+    font-size: 100px;
+}

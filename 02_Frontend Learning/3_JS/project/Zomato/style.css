@@ -1,0 +1,252 @@
+/* ---------- GLOBAL STYLING ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#head button {
+    background-color: rgb(51, 131, 51);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#head button:hover {
+    background-color: rgb(15, 52, 81);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------- ROOT GRID ---------- */
+#root {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 25px 30px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ---------- CARD IMAGE ---------- */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* ---------- CARD CONTENT ---------- */
+.card-content {
+    padding: 15px 18px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.rating {
+    background: #0b68cb;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card-footer span {
+    background: #f1f3f6;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Location */
+.card-location {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ---------- HOVER EFFECT FOR LOCATION ---------- */
+.card:hover .card-location span {
+    color: #ff4757;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 768px) {
+    #root {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media(max-width: 480px) {
+    #root {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+
+
+
+/* Popup container */
+#filterPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px 25px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Hidden class */
+#filterPopup.hidden {
+    display: none;
+}
+
+/* Header */
+#filterPopup h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Each filter option */
+#filterPopup .filterOption {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+#filterPopup .filterOption:hover {
+    background-color: #f0f0f0;
+}
+
+/* Radio button styling */
+#filterPopup input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007BFF; /* nice blue color */
+}
+
+/* Labels */
+#filterPopup label {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Buttons */
+#filterPopup button {
+    width: 48%;
+    padding: 8px 0;
+    margin: 10px 1%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Apply button */
+#filterPopup #applyFilter {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+#filterPopup #applyFilter:hover {
+    background-color: #0056b3;
+}
+
+/* Close button */
+#filterPopup #closeFilter {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#filterPopup #closeFilter:hover {
+    background-color: #c2c2c2;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>Employee Details Form</h1>
+       <form action="">
+<!-- only use of  "for=id" you move cursor anywhere and click then it click-->
+        <label for="full">Full Name:</label>
+        <input type="text" id="full" name="Full name" placeholder="Enter your full name">
+        <br><br>
+
+        <!-- @="%40"  value jayegi backend me  -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+        <br><br>
+        
+        <label for="Phone Number">Phone Number:</label>
+        <input type="tel" id="Phone Number" name="Phone Number" placeholder="Enter your Phone Number ">
+        <br><br>
+        
+        <label >Gender:</label>
+        <!-- IF we are not mentenoiod value then backend me by default "on" bhejega-->
+        <input type="radio" id="m" name="gender" value="male">
+        <label for="m">Male</label>
+        <input type="radio" id="f" name="gender" value="Female">
+        <label for="f">Female</label>
+        <input type="radio" id="o" name="gender" value="other">
+        <label for="o">Other</label>
+        <br><br>
+        
+        <label for="job">Job Title:</label>
+        <input type="text" id="job" name="job title" placeholder="Enter your job title">
+        <br><br>
+
+        <label for="16" >Department:</label>
+        <select name="Department" id="16" >
+            <!--   <option value="">Select Your Department</option>  if any user select "Select Your Department"  then backend me kuch nahi jayega because value me kuch mentioned nahi hai -->
+
+            <!-- use disabled selected attributes for hidding anything -->
+            <option value="" disabled selected>Select Your Department</option>
+            <option value="CSE">CSE</option>
+            <option value="ME">ME</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="ECE">ECE</option>
+        </select>
+<br><br>
+    <button>Submit</button>
+       </form>
+</body>
+</html>

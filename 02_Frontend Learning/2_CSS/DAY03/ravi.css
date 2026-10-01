@@ -1,0 +1,14 @@
+h1{
+    background-color: blueviolet ;
+}
+
+/* by type */
+/* pority order me jo sabse jayda pass hoga uska pority jayada hoga*/
+
+
+
+/* by important */
+
+h1{
+    background-color: chartreuse !important;
+}

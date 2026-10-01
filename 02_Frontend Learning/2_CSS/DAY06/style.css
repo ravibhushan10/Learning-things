@@ -1,0 +1,41 @@
+.container{
+    background-color: rgb(0, 213, 255);
+   margin-left: 200px;
+   margin-top: 150px;
+   position: relative;
+   height: 4000px;
+}
+.box{
+   
+   background-color: rgb(76, 0, 255);
+   height: 100px;
+   width: 100px;
+   display: inline-block;
+}
+/* use of position relative 
+it provides 4 facility top,bottom,left ,right
+position: relative = it moves from the original position 
+position: static = by default position is static any faclility not work in static(top,bottom,left,right)
+position: absolute = from viewport 
+
+*/
+.box1{
+  background-color: chartreuse;
+  
+  
+}
+.box2{
+  background-color: rgba(255, 0, 89, 0.836);
+  position:fixed;
+  top: 20px;
+
+  
+}
+.box3{
+   
+  
+  background-color: rgb(123, 0, 255);
+}
+.box4{
+  background-color: rgb(0, 47, 255);
+}

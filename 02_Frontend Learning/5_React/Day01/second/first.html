@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    
+    <!-- 1: React link (Both are internally Object of JS)
+         2: ReactDOM link
+      -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>  
+ <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+ <!-- Why react and react-dom code in different-different file not in same file:::
+
+    Because react is used in both web apps and mobile apps
+    1: Web Apps: we need both react and reactDOM 
+    2: Mobile Apps: we need only react 
+
+    That's why we not combine both together if we combine then it works in webapps well but in mobile apps (reactDOM) added extra code which increase your codebase and slow performance 
+
+    Hence both exist in different-different file
+
+   -->
+
+
+    <script src="first.js"></script>
+</body>
+</html>

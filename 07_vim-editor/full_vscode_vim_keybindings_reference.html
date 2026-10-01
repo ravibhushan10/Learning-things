@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>VS Code + Vim Keybindings Reference</title>
+<style>
+  :root {
+    --bg: #1e1e1e;
+    --bg-card: #252526;
+    --bg-secondary: #2d2d30;
+    --border: #3c3c3c;
+    --border-light: #4a4a4a;
+    --text-primary: #d4d4d4;
+    --text-secondary: #9d9d9d;
+    --text-tertiary: #6a6a6a;
+    --accent: #4fc1ff;
+    --accent-bg: rgba(79, 193, 255, 0.12);
+    --danger: #f14c4c;
+    --danger-bg: rgba(241, 76, 76, 0.12);
+    --success: #89d185;
+    --success-bg: rgba(137, 209, 133, 0.12);
+    --warning: #cca700;
+    --warning-bg: rgba(204, 167, 0, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 24px;
+  }
+
+  .wrap { max-width: 1000px; margin: 0 auto; }
+
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  .sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+
+  .tabs { display: flex; gap: 6px; margin-bottom: 18px; flex-wrap: wrap; }
+  .tab {
+    padding: 6px 14px; border-radius: 6px; font-size: 13px; cursor: pointer;
+    border: 1px solid var(--border); background: transparent; color: var(--text-secondary);
+    transition: all 0.15s;
+  }
+  .tab.active { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); font-weight: 500; }
+  .tab:hover:not(.active) { border-color: var(--border-light); }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+
+  .ctitle {
+    font-size: 12px; font-weight: 600; color: var(--text-secondary);
+    text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px; justify-content: space-between;
+  }
+
+  .row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); gap: 10px; }
+  .row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .desc { font-size: 13px; color: var(--text-primary); flex: 1; line-height: 1.4; }
+  .ctx { font-size: 11px; color: var(--text-tertiary); margin-top: 2px; }
+
+  .keys { display: flex; gap: 3px; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+  kbd {
+    background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 5px;
+    padding: 2px 7px; font-family: "SF Mono", Consolas, monospace; font-size: 11px; color: var(--text-primary);
+    white-space: nowrap;
+  }
+  .plus { font-size: 11px; color: var(--text-tertiary); }
+
+  .tip { background: var(--bg-secondary); border-left: 2px solid var(--accent); padding: 8px 10px; font-size: 12px; color: var(--text-secondary); margin-top: 10px; line-height: 1.5; }
+  .fixnote { background: var(--success-bg); border-left: 2px solid var(--success); padding: 8px 10px; font-size: 12px; color: var(--text-primary); margin-top: 10px; line-height: 1.5; }
+
+  .badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 600; white-space: nowrap; }
+  .bv { background: var(--danger-bg); color: var(--danger); }
+  .bk { background: var(--success-bg); color: var(--success); }
+  .ba { background: var(--warning-bg); color: var(--warning); }
+  .bf { background: var(--accent-bg); color: var(--accent); }
+
+  .banner {
+    background: var(--warning-bg); border: 1px solid var(--warning); border-radius: 8px;
+    padding: 12px 16px; margin-bottom: 20px; font-size: 13px; line-height: 1.6;
+  }
+  .banner b { color: var(--warning); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>VS Code + Vim keybindings reference</h1>
+  
+
+  <div class="tabs">
+    <button class="tab active" onclick="sw('terminal',this)">Terminal</button>
+    <button class="tab" onclick="sw('sidebar',this)">Sidebar &amp; files</button>
+    <button class="tab" onclick="sw('buffers',this)">Buffers &amp; splits</button>
+    <button class="tab" onclick="sw('visual',this)">Visual mode</button>
+    <button class="tab" onclick="sw('save',this)">Save &amp; quit</button>
+  </div>
+
+  <div id="terminal" class="section active">
+    <div class="grid">
+      <div class="card">
+        <div class="ctitle">Toggle &amp; create <span class="badge bf">FIXED</span></div>
+        <div class="row">
+          <div><div class="desc">Open/focus/close terminal panel</div><div class="ctx">Works from editor, sidebar, anywhere</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>j</kbd></div>
+        </div>
+        <div class="row">
+          <div><div class="desc">Create a new terminal tab</div><div class="ctx">Only when terminal is focused</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>n</kbd></div>
+        </div>
+        <div class="row">
+          <div><div class="desc">Kill (close) current terminal</div><div class="ctx">Only when terminal is focused</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>w</kbd></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Switch between terminals <span class="badge ba">CONTEXT</span></div>
+        <div class="row">
+          <div><div class="desc">Focus next terminal tab</div><div class="ctx">Terminal must be focused</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>a</kbd></div>
+        </div>
+        <div class="row">
+          <div><div class="desc">Focus previous terminal tab</div><div class="ctx">Terminal must be focused</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>b</kbd></div>
+        </div>
+        <div class="tip">a = advance, b = back.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sidebar" class="section">
+    <div class="grid">
+      <div class="card">
+        <div class="ctitle">Open, close &amp; focus sidebar <span class="badge bf">FIXED</span></div>
+        <div class="row">
+          <div><div class="desc">Focus file explorer</div><div class="ctx">Editor or terminal focused</div></div>
+          <div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>e</kbd></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctitle">File tree actions <span class="badge ba">CONTEXT</span></div>
+        <div class="row"><div><div class="desc">Create new file</div><div class="ctx">Explorer focused, no input box open</div></div><div class="keys"><kbd>n</kbd></div></div>
+        <div class="row"><div><div class="desc">Create new folder</div><div class="ctx">Explorer focused, no terminal</div></div><div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>N</kbd></div></div>
+        <div class="row"><div><div class="desc">Rename selected file/folder</div><div class="ctx">Explorer focused, no input box open</div></div><div class="keys"><kbd>r</kbd></div></div>
+        <div class="row"><div><div class="desc">Delete selected file/folder</div><div class="ctx">Explorer focused, no input box open</div></div><div class="keys"><kbd>d</kbd></div></div>
+        <div class="tip">First press <kbd>Shift+E</kbd> to land in the explorer, navigate with arrows or hjkl, then use n/r/d on the selected item.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="buffers" class="section">
+    <div class="grid">
+      <div class="card">
+        <div class="ctitle">Switch tabs/buffers <span class="badge bv">VIM</span></div>
+        <div class="row"><div><div class="desc">Go to previous tab (left)</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>h</kbd></div></div>
+        <div class="row"><div><div class="desc">Go to next tab (right)</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>l</kbd></div></div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Create splits <span class="badge bf">FIXED</span></div>
+        <div class="row"><div><div class="desc">Vertical split (side by side)</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>v</kbd></div></div>
+        <div class="row"><div><div class="desc">Horizontal split (top/bottom)</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>s</kbd></div></div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Move focus between panes <span class="badge bf">FIXED</span></div>
+        <div class="row"><div><div class="desc">Focus left pane</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>h</kbd></div></div>
+        <div class="row"><div><div class="desc">Focus pane below</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>j</kbd></div></div>
+        <div class="row"><div><div class="desc">Focus pane above</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>k</kbd></div></div>
+        <div class="row"><div><div class="desc">Focus right pane</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>l</kbd></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="visual" class="section">
+    <div class="grid">
+      <div class="card">
+        <div class="ctitle">Comment <span class="badge bf">FIXED</span></div>
+        <div class="row"><div><div class="desc">Toggle comment on selected lines</div><div class="ctx">Visual mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>c</kbd></div></div>
+        <div class="tip">Select lines with <kbd>V</kbd>, then <kbd>Space+c</kbd>. Uses the correct comment syntax per language automatically.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="save" class="section">
+    <div class="grid">
+      <div class="card">
+        <div class="ctitle">Save &amp; close <span class="badge bf">FIXED</span></div>
+        <div class="row"><div><div class="desc">Save and close (write + quit)</div><div class="ctx">Normal mode</div></div><div class="keys"><kbd>Space</kbd><span class="plus">+</span><kbd>x</kbd></div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+  function sw(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

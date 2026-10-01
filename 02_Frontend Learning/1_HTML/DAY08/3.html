@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action= jab submit karunga tab ye info kaha jayega tab iske liye ulr dete hai server ka -->
+    <form action=" url of server">
+        <!-- <fieldset></fieldset>  it used to show grouping  -->
+         <!-- <legend></legend>  it is used to wirte anything -->
+         <fieldset>
+            <legend>IT JEE Registration Form</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name of student">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email of student">
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone number">
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="student password">
+        <br><br>
+
+        <label >Gender:</label>
+        <input type="radio" id="m" name="gender" value="male">
+        <label for="m">Male</label>
+        <input type="radio" id="f" name="gender" value="female">
+        <label for="f">Female</label>
+        <input type="radio" id="o" name="gender" value="other">
+        <label for="o">Other</label>
+        <br><br>
+
+<!--  simple date = you choose all dates  -->
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date" name="DOB">
+        <br><br>
+
+<!-- fixed date= choose selected (criteriya date) -->
+ <!-- use "min and max " tags for fixed date-->
+  <!-- formate of min and max is= year-month-day -->
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date" name="DOB" min="2001-01-01" max="2005-12-31">
+        <br><br>
+
+        <label for="school">School Name:</label>
+        <input type="text" id="school" name="school name of student">
+        <br><br>
+
+        <label for="board">Board:</label>
+        <select name="Board Name" id="board">
+            <option value="" disabled selected>Select Your Board</option>
+            <option value="ECE">ECE</option>
+            <option value="BSEB">BSEB</option>
+            <option value="CBSE">CBSE</option>
+        </select>
+        <br><br>
+
+        <!-- use min and max tag for fixed the date criteriya -->
+         <!-- but you type 123454 manually oo to hai but jab aap form submit karenge tab ye error dega -->
+        <label for="passing">Year of Passing:</label>
+        <input type="number" id="passing" name="Year of Passing" min="2023" max="2025">
+        <br><br>
+
+        <label for="center">Exam-Center:</label>
+        <select name="exam center name" id="center">
+        <option value="" disabled selected>Select Center</option>
+        <option value="Motipur">Motipur</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Hajipur">Hajipur</option>
+        </select>
+        <br><br>
+        <button>Register</button>
+    </fieldset>
+    </form>
+</body>
+</html>

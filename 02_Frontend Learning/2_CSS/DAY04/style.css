@@ -1,0 +1,42 @@
+h2{
+    /* width and height is used to fixed our content in limeted area of webpage */
+    background-color: aqua;
+    width: 30vw;
+    /* border-width: 5px;
+    border-color: black; 
+    border-style: double;*/
+    /* shortcut used for all three  */
+    border: 20px rgb(0, 0, 0) solid ;
+    
+    border-radius: 100px;
+    /* border radius is used to curve our corner */
+    
+    padding: 30px;
+
+   
+}
+h1{
+ border-left-width: 20px;
+ border-color: rgb(15, 199, 15);
+ border-style: solid;
+ border-left-color: aqua;
+}
+ul{
+    background-color: blueviolet;
+}
+p{
+   width: 300px;
+    /* single value= all four side */
+    border-width: 5px;
+   /* when you have two optin for border value then first one is allocated to top and bottom and second one is allocated to right and left */
+    border-width: 5px 10px;
+    /*tripple value= top right bottom */
+    border-width: 5px 10px 16px;
+    /* four value= top right  bottom left */
+    border-width: 5px 10px 16px 30px;
+
+    border-style: solid;
+    
+    padding: 10px 20px 30px 40px;
+    margin: 20px;
+}

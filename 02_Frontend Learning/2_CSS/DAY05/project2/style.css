@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+.circle{
+    background-color: red;
+
+    /* height: 200px;
+    width: 200px; */
+
+    height: 40vh;
+    width: 40vh;
+
+    /* half of height and width */
+    border-radius: 50%;
+    /* or  */
+    margin: auto;
+    margin-top: 30vh;
+     /* it takes to center horizontally*/
+     
+
+}

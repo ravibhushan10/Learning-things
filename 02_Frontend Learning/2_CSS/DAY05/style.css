@@ -1,0 +1,46 @@
+.first{
+    display: inline;
+background-color: aqua;
+height: 200px;
+width: 150px;
+margin: 20px;
+
+}
+.sixth{
+    
+background-color: aqua;
+height: 200px;
+width: 100px;
+margin: 20px;
+}
+.second{
+    background-color: blanchedalmond;
+    height: 200px;
+    width: 100px;
+    margin: 20px;
+}
+
+/* how to make inline elements to block level elements and block to inline elements  = use display block  or inline */
+.third{
+    display: block;
+    background-color: blueviolet;
+    height: 200px;
+    width: 100px;
+    margin: 50px;
+}
+/* display inline-block = element hoga jo behave karge inline ki tarah but usme hieght and widht ,margin fix kar sakte hai 
+
+*/
+/* it is a hybrid property display:inline- block that  
+ye to inline hi rehega but isko height and width,margin de sakte hai  ye sare ek hi line  me align honge
+*/
+/* didplsy inline se rahega to inline hi but usko height width and margin de sakte hai */
+
+/* so better to use inline block  */
+.fourth{
+    display: inline-block;
+    background-color: crimson;
+    height: 200px;
+    width: 250px;
+    margin: 20px;
+}

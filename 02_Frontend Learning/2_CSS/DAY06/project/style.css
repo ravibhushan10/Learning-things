@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+}
+/* header{
+  background-color: aqua;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  
+  
+}
+main{
+ padding-top: 30px;
+} */
+
+/* second method */
+header{
+  background-color: aqua;
+  display: inline-block;
+  position: fixed;
+  top:0px;
+  left:0px;
+  right:0px;  /* when you writing left and right indirectly you are difining widht so use width 100%*/
+
+  
+  
+}
+main{
+    margin-top: 30px;
+}

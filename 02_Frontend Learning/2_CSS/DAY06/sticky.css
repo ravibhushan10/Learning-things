@@ -1,0 +1,50 @@
+.container{
+    background-color: rgb(0, 213, 255);
+   margin-left: 200px;
+   margin-top: 150px;
+   position: relative;
+   height: 4000px;
+}
+.box{
+   
+   background-color: rgb(76, 0, 255);
+   height: 100px;
+   width: 100px;
+   display: inline-block;
+}
+
+.box1{
+  background-color: chartreuse;
+  
+  
+}
+/* sticky aapne parrent tak hi fixed rahta hai parrent ke bahar normal ho jata hai
+ 
+but fixed viewport ke hisab se fixed hota hai
+ */
+.box2{
+  background-color: rgba(255, 0, 89, 0.836);
+ position: sticky;
+ top: 0px;  /* sticky is work as fixed when added left ,right,bottom,top= 0px */ 
+ left: 0px;   /* sticky is work as relative when  not added any one left ,right,bottom,top= 0px */
+
+  /* top 0px and bottom 0px for  vertical scrolling  */
+  /* left 0px and right 0px for  horizontal scrolling  */
+
+  /* mention any one of then either top or bottom (left or right) */
+
+  
+}
+.newcont{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.box3{
+   
+  
+  background-color: rgb(123, 0, 255);
+}
+.box4{
+  background-color: rgb(0, 47, 255);
+}

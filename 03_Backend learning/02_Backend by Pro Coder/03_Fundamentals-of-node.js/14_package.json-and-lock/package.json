@@ -1,0 +1,14 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "hi": "pwd",
+    "start": "node index.js",
+    "test": "ls",
+    "restart": "node",
+    "stop": "git -v",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "2.2.1"
+  }
+}

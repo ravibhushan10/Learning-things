@@ -1,0 +1,69 @@
+.card {
+  width: 260px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.card h2 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+.card a {
+  padding: 6px 14px;
+  color: #fff;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.card a:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transform: scale(1.05);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

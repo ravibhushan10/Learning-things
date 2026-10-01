@@ -1,0 +1,32 @@
+/* boby tag ko select karke pure website ke page ko styling kar sakte hai */
+body{
+    background-color: turquoise;
+    color: green;
+}
+
+/* star tag se ek sath sare elements ko select kar sakte hai(*)
+star tag == universal selector */
+/* *{
+    background-color: rgb(0, 162, 255);
+} */
+
+
+/* grouping selector */
+h1,h2,h3,#first{
+    color: red;
+    background-color: antiquewhite;
+}
+
+/* attributes selector */
+div[draggable="true"]{
+    background-color: rgb(65, 37, 99);
+}
+
+/* select by desendent== ander koi bhi h2 hai usko change kar do pure tree me jake */
+section h2{
+    background-color: rgb(111, 0, 255);
+}
+ /* select by child == sirf aapne child ko change karega aapne grandson kon nahi karegaa */
+section >p{
+    background-color: black;
+}

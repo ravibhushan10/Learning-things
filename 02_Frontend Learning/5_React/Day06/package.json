@@ -1,0 +1,18 @@
+{
+  "name": "day6",
+  "version": "1.0.0",
+  "description": "npm init\r npm install react\r npm install react-dom\r npm install -D parcel",
+ 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}

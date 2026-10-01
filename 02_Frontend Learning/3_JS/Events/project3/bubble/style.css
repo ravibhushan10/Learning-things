@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(243, 240, 240, 0.653);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#grandparent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: chartreuse;
+    border: 5px solid black;
+}
+#parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    border: 5px solid black;
+}
+#child{
+    height: 100px;
+    border: 5px solid black;
+    width: 100px;
+    background-color: aqua;
+}

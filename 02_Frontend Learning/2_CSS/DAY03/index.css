@@ -1,0 +1,16 @@
+
+/* font-size: 20vw; */
+/* vw=viewport width */
+/* vh=viewport height */
+h1{
+    font-weight: 100;
+    font-style: normal;
+text-transform: lowercase;
+
+}
+p{
+    line-height: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-stretch: wider;
+}

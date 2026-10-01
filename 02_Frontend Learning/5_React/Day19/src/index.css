@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* <h1 class="bg-red-300> Hello </h1>
+
+means .bg-red-300 class is already defined in tailwind css like
+
+.bg-red-300{
+backgroundcolor: "5DFFf"
+}
+
+.bg-red-400{
+backgroundcolor: "5DFFf"
+}
+
+.bg-red-500{
+backgroundcolor: "5DFFf"
+}
+
+.p-1{
+ padding : 1px;
+}
+ .flex{
+ display:"flex"
+}
+*/
+
+
+

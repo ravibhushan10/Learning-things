@@ -1,0 +1,37 @@
+p>div {
+    color: blue;
+    background-color: red;
+}
+div>p{
+    background-color: red;
+}
+/* we have four method to chang the color
+1.by color name
+2.by rgb
+3.by hexadecimal 
+4.by hsl*/
+/* change color by name */
+h1
+{
+    color: blue;
+}
+/* h2
+{
+    color: blue;
+} */
+
+/* change color by rgb= red green blue*/
+/* 0-255 */
+
+/* here alfa is used to show  the transparency its value is 0 to 1  */
+h2{
+     color: rgba(84, 184, 84,0.9);
+}
+p.ravi{
+    color: #8a1289;
+}
+p.lokesh{
+    color: hsla(79, 68%, 46%, 0.8);
+}
+
+

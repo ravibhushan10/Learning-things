@@ -1,0 +1,27 @@
+*{
+    background-color: white;
+    margin: 0;
+
+}
+
+.first,.third{
+    display: inline-block;
+    background-color: red;
+    height: 40vh;
+    width: 25vw;
+  
+}
+.second,.fourth{
+  
+    display: inline-block;
+    background-color: red;
+    height: 40vh;
+    width: 60vw;
+}
+.second,.fourth{
+    margin-left: 11vw;
+    /* in my laptop it is not working when i write 15vw it takes to new line but  another laptop work prfectly */
+}
+.third,.fourth{
+    margin-top: 20vh;
+}

@@ -1,0 +1,13 @@
+div{
+    background-color: aqua;
+    height: 200px;
+    width: 400px;
+    /* by default overflow is vissible for all */
+    overflow: auto;  /* it automaic hide the overflow content and give the scroll bar*/
+}
+/* 
+hidden
+scroll
+auto 
+vissible
+ */

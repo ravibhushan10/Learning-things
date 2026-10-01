@@ -1,0 +1,21 @@
+h1{
+    background-color: lawngreen;
+    color: red;
+}
+ul{
+    background-color: rgb(57, 19, 139);
+    color: rgb(0, 128, 9);
+}
+/* class ko select karne ke liye dot(.)  ka use karte*/
+.first{
+    background-color: cornflowerblue;
+}
+.second{
+    background-color: rgb(53, 121, 157);
+}
+
+/* id ko select karne ke liye hash(#) ka use karte hai
+id hamesh unique hota hai */
+#third{
+    background-color: rgb(217, 117, 134);
+}

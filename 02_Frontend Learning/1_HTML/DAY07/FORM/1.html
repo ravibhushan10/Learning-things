@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <!-- Take the user input = input tag -->
+        <input type="text">
+        <br>
+        <br>
+
+        <!-- input me kis type ka data hoga oo lable tage se malum hoga -->
+         <!-- lable ka for and input ka id same hona chahiye -->
+          <!-- for=id -->
+         <label for="first">Name:</label>
+         <input type="text" id="first">
+<br><br>
+<!-- without for no cursor moved to text -->
+         <label for="">Name:</label>
+         <input type="text" id="first">
+<br><br>
+         <label for="second">Age:</label>
+         <input type="number" id="second">
+<br><br>
+
+<!-- required= without fill kiye aap submit nahi kar sakte h -->
+ <!-- red star = required -->
+<label for="third">Mobile No:</label>
+<input type="number" id="third"  required>
+<br></br>
+<label for="third">Section:</label>
+<input type="text" id="third" required>
+<br><br>
+
+<!-- meaning of name attribute -->
+ <!-- aapke website par save hoga =  Name:ravi  -->
+  <!-- server par save hoga= user name= ravi  -->
+ <label for="first01">Name:</label>
+ <input type="text" id="first01" name="user name">
+
+ <!-- placeholder= it is used to show the shaddow text in box which is going to dismissed when user fill it -->
+
+ <label for="first12">Name:</label>
+ <input type="text" id="first12" name="user name" placeholder="enter your name">
+
+<br><br>
+         <button>Submit</button>
+         
+    </form>
+</body>
+</html>

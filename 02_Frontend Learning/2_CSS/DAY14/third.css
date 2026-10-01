@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+   height: 100%;
+    gap: 1rem;
+    background-color: black;
+    padding: 4rem;
+    display: grid;
+
+    /* this is the best option of resposiveness   
+    grid-template-columns: repeat(auto-fill,minmax(80px,150px));
+    */
+grid-template-columns: repeat(4,1fr);
+
+/*  shorthand notation of both is = place-items*/
+justify-items: center;
+align-items: center;
+
+/* formate is =  place-items: <align-items> <justify-items>
+if one mention then copy it for both
+  */
+place-items: center center;
+
+
+   
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(38, 255, 0);
+    font-size: 4rem;
+    color: black;
+}

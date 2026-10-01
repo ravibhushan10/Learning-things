@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  perspective: 800px;
+  perspective: 8;
+   /* apply perspective here */
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: orange;
+  font-size: 2rem;
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 2s linear;
+}
+
+/* Rotate */
+.box1:hover { transform: rotateX(180deg); }
+.box2:hover { transform: rotateY(180deg); }
+.box3:hover { transform: rotateZ(80deg); }
+
+/* Translate */
+.box4:hover { transform: translateX(300px); }
+.box5:hover { transform: translateY(-300px); }
+.box6:hover { transform: translateZ(200px); } /* looks 3D */
+
+/* scale */
+.box7:hover { transform: scaleX(0.5); }
+.box8:hover { transform: scaleY(2); }
+.box9:hover { transform: scaleZ(8)  rotateX(180deg); } /* looks 3D */
+

@@ -1,0 +1,23 @@
+.container{
+    height: 800px;
+    width: auto;
+    background-color: aqua;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: chocolate;
+    transition-property: background-color;
+    transition-duration: 5s;
+    transition-timing-function: ;
+   
+}
+.box:hover{
+    background-color: blanchedalmond;
+    
+}

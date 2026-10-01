@@ -1,0 +1,5 @@
+pwd
+ls -l
+ls
+
+<!-- these are treated as a command  -->
